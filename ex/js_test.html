@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+<title> Web Page for JavaScript </title>
+</head>
+<body>
+<p id="demo">Hi.</p>
+<p id="demo2">Hi.</p>
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+var handle = {}
+handle[0] = "Hello ";
+handle[1] = "World, ";
+handle[2] = "JavaScript";
+document.getElementById("demo2").innerHTML = handle[0] + handle[1] + handle[2];
+document.write(handle[0] + handle[1] + handle[2]);
+</script>
+</body>
+</HTML>
