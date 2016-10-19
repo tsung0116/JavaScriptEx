@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to test if a variable is undefined.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x;
+    console.log(x);                               
+    console.log(typeof x);
+    if (x === undefined) {
+        txt = "x is undefined";
+    } else {
+        txt = "x is defined";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
