@@ -4,7 +4,7 @@
 var x = 10;
 
 function func1() {
-	//Local scope
+	//Local scope (only in function block)
     var x = 20;
     console.log(x);
 }
@@ -101,6 +101,7 @@ var x = 5;
 //equivalent to:
 var x = 5;
 
+//immediate function
 (function () {
     var x;
     console.log(x);

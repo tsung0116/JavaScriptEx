@@ -1,23 +1,26 @@
-//create an empty object
+//create an object
 var obj = new Object();
 
 //equivalent to:
 var obj = {};
 
-//Object individuation
-var obj = {};
+
+//Object is the collection of properties and corresponding values (key-value pairs).
+//An object is a hash table.
+
+//Object individuation (add or delete properties)
 obj.x = 10;
 console.log(obj.x); //10
 delete obj.x;
 console.log(obj.x); //undefined
 
-// built-in properties cannot be deleted
+//built-in properties cannot be deleted
 var arr = [];
 console.log(arr.length); //0
 console.log(delete arr.length);  //false
 
 
-//create an object with properties
+//create an object with given values of properties
  var obj1 = {
     x : 10,
     y : 20
@@ -26,19 +29,22 @@ console.log(obj1.x);          //10
 console.log(obj1.y);          //20
 
 
-//in operator
+//in operator 
+console.log('x' in obj1);  //true
+
 for(var prop in obj1) {
     console.log(prop);
     console.log(typeof prop);
+	console.log(obj1.prop);
 }
 /* output
 x
 string
+undefined
 y
 string
+undefined
 */
-
-console.log('x' in obj1);  //true
 
 
 //[] operator
@@ -47,17 +53,15 @@ obj2['x'] = 10;
 console.log(obj2.x);     //10
 console.log(obj['x']);   //10
 
-
-//Object is the collection of properties and corresponding values
-for(var prop in obj) {
-    console.log(prop + ': ', obj[prop]);
+for(var prop in obj1) {
+    console.log(prop + ': ', obj1[prop]);
 }
 /* output
 x:  10
 y:  20
 */
 
-//[] operator used when the name of a property contains . or space 
+//[] operator can also be used when the name of a property contains . or space 
  var obj3 = {
     'openhome.cc': 'OpenHome',
 };
