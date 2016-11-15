@@ -74,14 +74,14 @@ console.log(delete obj3['openhome.cc']);  //true
 console.log('openhome.cc' in obj3);       //false
 
 
-//properties
-var obj = {};
-console.log(obj.x ? 'has x' : 'has no x'); //has no x
-obj.x = 10;
-console.log(obj.x ? 'has x' : 'has no x'); //'has x'
+//detectoin of properties
+var obj4 = {};
+console.log(obj4.x ? 'has x' : 'has no x'); //has no x
+obj4.x = 10;
+console.log(obj4.x ? 'has x' : 'has no x'); //'has x'
 
 
-//
+//example
 function doSome(option) {    
     return {
         x : option.x || 1,
@@ -90,9 +90,9 @@ function doSome(option) {
     };
 }
  
-function log(obj) {
-    for(var p in obj) {
-        console.log(p + ': ' + obj[p]);
+function log(inputObj) {
+    for(var p in inputObj) {
+        console.log(p + ': ' + inputObj[p]);
     }
 }
  

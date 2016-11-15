@@ -1,4 +1,5 @@
 //immediate function
+//http://jazznote.logdown.com/posts/197630
 
 var a = 10;
 if (a<100){
